@@ -1,0 +1,11 @@
+services:
+
+  node:
+    container_name: Node
+    image: node:current-alpine3.22
+    working_dir: /srv
+    ports:
+      - "3000:3000"
+      - "24678:24678"
+    volumes:
+      - ./../:/srv:delegated
